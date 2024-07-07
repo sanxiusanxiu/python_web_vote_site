@@ -28,15 +28,21 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
+# 项目中启用的所有Django应用
 INSTALLED_APPS = [
+    # 管理员站点
     'django.contrib.admin',
+    # 认证授权系统
     'django.contrib.auth',
+    # 内容类型框架
     'django.contrib.contenttypes',
+    # 会话框架
     'django.contrib.sessions',
+    # 消息框架
     'django.contrib.messages',
+    # 管理静态文件的框架
     'django.contrib.staticfiles',
+    'polls.apps.PollsConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +60,7 @@ ROOT_URLCONF = 'vote_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,15 +108,17 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+# 设置语言
+LANGUAGE_CODE = 'zh-Hans'
+# 设置时区
+TIME_ZONE = 'Asia/Shanghai'
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+# 启用国际化和本地化
 USE_I18N = True
 
 USE_L10N = True
 
+# 启用时区支持
 USE_TZ = True
 
 
