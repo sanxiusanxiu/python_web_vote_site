@@ -1,4 +1,6 @@
 """
+作为你的项目的运行在 WSGI 兼容的Web服务器上的入口
+
 WSGI config for vote_site project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.

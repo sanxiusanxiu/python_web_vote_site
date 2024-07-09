@@ -1,4 +1,6 @@
 """
+作为你的项目的运行在 ASGI 兼容的 Web 服务器上的入口
+
 ASGI config for vote_site project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.

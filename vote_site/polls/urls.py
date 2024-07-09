@@ -1,6 +1,12 @@
 from django.urls import path
 from . import views
 
+
+# urlpatterns = [
+#     # 在这里进行 URL 映射，不过你还需要在根目录下 urls.py 的 urlpatterns 列表里插入一个 include()
+#     path('', views.index, name='index'),
+# ]
+
 # # 将URL映射到第一个视图
 # urlpatterns = [
 #     path('', views.index, name='index'),

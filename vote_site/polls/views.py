@@ -12,6 +12,10 @@ from django.views import generic
 from django.utils import timezone
 
 
+# # 编写第一个视图，如果想看见视图的效果，需要在 polls/urls.py 下将一个 URL 映射到该视图
+# def index(request):
+#     return HttpResponse("你好。你现在正在 polls 应用的首页。")
+
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
@@ -48,9 +52,8 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
-# # 编写第一个视图
-# # def index(request):
-# #     return HttpResponse("你好. You're at the polls index.")
+
+
 # # def index(request):
 # #     latest_question_list = Question.objects.order_by('-pub_date')[:5]
 # #     template = loader.get_template('polls/index.html')
